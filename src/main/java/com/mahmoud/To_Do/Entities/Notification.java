@@ -1,11 +1,12 @@
 package com.mahmoud.To_Do.Entities;
 
 import jakarta.persistence.*;
-import jdk.jfr.Enabled;
+
 
 import java.time.LocalDateTime;
 
-@Enabled
+@Entity
+@Table(name = "Notification")
 public class Notification {
 
     @Id
@@ -21,6 +22,10 @@ public class Notification {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    public Notification() {
+
+    }
 
     public Notification(Integer id, String message, boolean seen, LocalDateTime createdAt, User user) {
         this.id = id;
