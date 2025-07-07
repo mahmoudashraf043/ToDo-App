@@ -5,6 +5,7 @@ import com.mahmoud.To_Do.Entities.User;
 import com.mahmoud.To_Do.Repository.UserRepo;
 import jakarta.servlet.ServletContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;

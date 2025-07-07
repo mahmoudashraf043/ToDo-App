@@ -15,7 +15,7 @@ import java.util.Map;
 @Component
 public class JwtUtil {
 
-    private final String secret = "tryingToClimbUsingTheHardWay";
+    private final String secret = "tryingToClimbUsinmahmoudasdhjsgkdfkasdfsadfasggTheHardWay";
 
     public Map<String, Object> generateClaims(User user) {
         Map<String, Object> claims = new HashMap<>();
