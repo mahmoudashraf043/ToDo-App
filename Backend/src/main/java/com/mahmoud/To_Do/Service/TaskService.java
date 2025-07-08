@@ -56,10 +56,19 @@ public class TaskService {
         if(temp.getUser().getId() != user.getId()){
             throw new Exception("this task does not belong to this user");
         }
-        temp.setTitle(task.getTitle());
-        temp.setDescription(task.getDescription());
-        temp.setCompleted(task.isCompleted());
-        temp.setDueDate(task.getDueDate());
+        if(task.getTitle() != null) {
+            temp.setTitle(task.getTitle());
+        }
+        if(task.getDescription() != null) {
+            temp.setDescription(task.getDescription());
+        }
+        if(task.getDueDate() != null) {
+            temp.setDueDate(task.getDueDate());
+        }
+        if(task.isCompleted() != temp.isCompleted()) {
+            temp.setCompleted(task.isCompleted());
+        }
+
         return taskRepo.save(temp);
 
     }

@@ -23,7 +23,7 @@ public class NotificationService {
     @Autowired
     NotificationRepo notificationRepo;
 
-    @Scheduled(cron = "0 0 9 * * *") // every day at 8 AM
+    @Scheduled(cron = "0 0 9 * * *") // every day at 9 AM
     public void sendNotification() {
         LocalDate tomorrow = LocalDate.now().plusDays(1);
         List<Task> tasks = taskRepo.findTasksEndTomorrow(tomorrow);

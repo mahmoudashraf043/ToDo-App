@@ -1,5 +1,6 @@
 package com.mahmoud.To_Do.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -34,9 +35,11 @@ public class User implements UserDetails {
     private String email;
 
     @OneToMany(mappedBy = "user" , cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Task> tasks;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Notification> notifications;
 
 
