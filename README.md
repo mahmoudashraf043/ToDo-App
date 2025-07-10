@@ -80,7 +80,7 @@ Using Docker and Docker compose to Containerize the App and connect with mysql C
 Pull the pre-built image from Docker Hub:
 
 ```bash
-docker pull  mahmoudashraf043/to-do-app:1
-docker run -p 8080:8080  mahmoudashraf043/to-do-app:1
+docker pull  mahmoudashraf043/to-do-app:1.0
+docker run -p 8080:8080  mahmoudashraf043/to-do-app:1.0
 
 
